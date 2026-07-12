@@ -1,5 +1,4 @@
 import { AppProvider, useApp } from './store';
-import { AuthProvider } from './lib/auth-context';
 import { Sidebar, Topbar } from './components/Shell';
 import { Login } from './pages/Login';
 import { Dashboard } from './pages/Dashboard';
@@ -108,10 +107,8 @@ function Shell() {
 
 export default function App() {
   return (
-    <AuthProvider>
-      <AppProvider>
-        <Shell />
-      </AppProvider>
-    </AuthProvider>
+    <AppProvider>
+      <Shell />
+    </AppProvider>
   );
 }
