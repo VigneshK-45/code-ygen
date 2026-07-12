@@ -33,7 +33,7 @@ export function Login() {
             </div>
             <div>
               <p className="font-display font-bold text-lg leading-none">VTOP Chennai</p>
-              <p className="text-xs text-white/70 mt-1">Reimagined Portal</p>
+              <p className="text-xs text-white/70 mt-1">Student Login Portal</p>
             </div>
           </div>
 
