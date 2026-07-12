@@ -85,7 +85,7 @@ export function Sidebar() {
             </div>
             <div>
               <p className="font-display font-bold text-sm leading-none">VTOP</p>
-              <p className="text-[10px] text-ink-500 dark:text-ink-400 mt-0.5">Chennai · Reimagined</p>
+              <p className="text-[10px] text-ink-500 dark:text-ink-400 mt-0.5">Chennai </p>
             </div>
           </div>
           <button className="lg:hidden btn-ghost !p-2" onClick={() => setSidebarOpen(false)}>
