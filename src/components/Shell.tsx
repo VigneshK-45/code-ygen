@@ -17,19 +17,45 @@ import {
   Moon,
   Sun,
   Backpack,
+  Briefcase,
+  ClipboardList,
+  Contact,
+  Building2,
+  Bus,
+  UtensilsCrossed,
+  HeartPulse,
+  FileText,
+  Award,
+  MapPin,
+  QrCode,
+  Brain,
+  TrendingUp,
 } from 'lucide-react';
 import { useApp } from '../store';
 import type { PageId } from '../types';
 import { student } from '../data';
 
-const NAV: { id: PageId; label: string; icon: typeof LayoutDashboard; group: string }[] = [
+const NAV: { id: PageId; label: string; icon: typeof LayoutDashboard; group: string; badge?: string }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, group: 'Overview' },
   { id: 'attendance', label: 'Attendance', icon: CalendarCheck, group: 'Overview' },
+  { id: 'qrattendance', label: 'QR Attendance', icon: QrCode, group: 'Overview', badge: 'NEW' },
   { id: 'timetable', label: 'Timetable', icon: CalendarDays, group: 'Overview' },
   { id: 'academics', label: 'Academics', icon: GraduationCap, group: 'Academics' },
   { id: 'courses', label: 'Courses', icon: BookOpen, group: 'Academics' },
+  { id: 'assignments', label: 'Assignment Tracker', icon: ClipboardList, group: 'Academics', badge: 'NEW' },
+  { id: 'analytics', label: 'Performance Analytics', icon: TrendingUp, group: 'Academics', badge: 'NEW' },
+  { id: 'aiadvisor', label: 'AI Academic Advisor', icon: Brain, group: 'Academics', badge: 'NEW' },
   { id: 'fees', label: 'Fee Payment', icon: CreditCard, group: 'Academics' },
+  { id: 'scholarship', label: 'Scholarships', icon: Award, group: 'Academics', badge: 'NEW' },
   { id: 'feedback', label: 'Faculty Feedback', icon: MessageSquare, group: 'Academics' },
+  { id: 'placements', label: 'Placement Portal', icon: Briefcase, group: 'Career', badge: 'NEW' },
+  { id: 'idcard', label: 'Digital ID Card', icon: Contact, group: 'Campus Life', badge: 'NEW' },
+  { id: 'hostel', label: 'Hostel Management', icon: Building2, group: 'Campus Life', badge: 'NEW' },
+  { id: 'transport', label: 'Transport', icon: Bus, group: 'Campus Life', badge: 'NEW' },
+  { id: 'mess', label: 'Mess Menu', icon: UtensilsCrossed, group: 'Campus Life', badge: 'NEW' },
+  { id: 'medical', label: 'Medical Records', icon: HeartPulse, group: 'Campus Life', badge: 'NEW' },
+  { id: 'leave', label: 'Leave Application', icon: FileText, group: 'Campus Life', badge: 'NEW' },
+  { id: 'navigation', label: 'Campus Navigation', icon: MapPin, group: 'Campus Life', badge: 'NEW' },
   { id: 'notifications', label: 'Notifications', icon: Bell, group: 'Campus' },
   { id: 'events', label: 'Event Board', icon: CalendarHeart, group: 'Campus' },
   { id: 'lostfound', label: 'Lost & Found', icon: Backpack, group: 'Campus' },
@@ -82,8 +108,8 @@ export function Sidebar() {
                     >
                       <Icon size={18} className="shrink-0" />
                       <span className="truncate">{n.label}</span>
-                      {n.id === 'assistant' && (
-                        <span className="ml-auto chip bg-brand-600 text-white !px-1.5 !py-0.5 text-[9px]">NEW</span>
+                      {n.badge && (
+                        <span className="ml-auto chip bg-brand-600 text-white !px-1.5 !py-0.5 text-[9px]">{n.badge}</span>
                       )}
                     </button>
                   );

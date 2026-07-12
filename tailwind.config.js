@@ -86,6 +86,10 @@ export default {
           '70%': { transform: 'scale(1.3)', opacity: '0' },
           '100%': { opacity: '0' },
         },
+        scanline: {
+          '0%, 100%': { top: '10%' },
+          '50%': { top: '90%' },
+        },
       },
       animation: {
         'fade-up': 'fade-up 0.4s ease-out',

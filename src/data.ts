@@ -9,6 +9,16 @@ import type {
   EventItem,
   LostFoundItem,
   FacultyMember,
+  Placement,
+  Assignment,
+  HostelInfo,
+  TransportRoute,
+  MessMenuItem,
+  MedicalRecord,
+  LeaveApplication,
+  Scholarship,
+  CampusPlace,
+  AnalyticsPrediction,
 } from './types';
 
 export const student: Student = {
@@ -159,3 +169,118 @@ export const assistantSuggestions = [
   'How much fee is pending?',
   'Show my CGPA trend',
 ];
+
+// --- Placements ---
+export const placements: Placement[] = [
+  {
+    id: 'p1', company: 'Google', role: 'Software Engineer (STEP)', package: 28, date: '2025-09-10',
+    status: 'Interview', logo: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=200',
+    rounds: [{ name: 'Online Assessment', status: 'Cleared' }, { name: 'Technical Round 1', status: 'Cleared' }, { name: 'Technical Round 2', status: 'Pending' }, { name: 'HR Round', status: 'Pending' }],
+  },
+  {
+    id: 'p2', company: 'Microsoft', role: 'SDE Intern', package: 25, date: '2025-08-28',
+    status: 'Shortlisted', logo: 'https://images.pexels.com/photos/267669/pexels-photo-267669.jpeg?auto=compress&cs=tinysrgb&w=200',
+    rounds: [{ name: 'Online Assessment', status: 'Cleared' }, { name: 'Group Discussion', status: 'Pending' }, { name: 'Technical Interview', status: 'Pending' }],
+  },
+  {
+    id: 'p3', company: 'Amazon', role: 'SDE-1', package: 32, date: '2025-08-15',
+    status: 'Rejected', logo: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=200',
+    rounds: [{ name: 'Online Assessment', status: 'Cleared' }, { name: 'Technical Round', status: 'Failed' }],
+  },
+  {
+    id: 'p4', company: 'Goldman Sachs', role: 'Technology Analyst', package: 22, date: '2025-09-20',
+    status: 'Applied', logo: 'https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=200',
+    rounds: [{ name: 'Online Assessment', status: 'Pending' }],
+  },
+  {
+    id: 'p5', company: 'Atlassian', role: 'Software Engineer', package: 30, date: '2025-09-05',
+    status: 'Offered', logo: 'https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=200',
+    rounds: [{ name: 'Online Assessment', status: 'Cleared' }, { name: 'Technical Round 1', status: 'Cleared' }, { name: 'Technical Round 2', status: 'Cleared' }, { name: 'HR Round', status: 'Cleared' }],
+  },
+];
+
+// --- Assignments ---
+export const assignments: Assignment[] = [
+  { id: 'a1', title: 'DBMS Project — Normalization', course: 'DBMS', code: 'CSE3001', due: '2025-08-20', status: 'Pending', priority: 'High', weight: 15 },
+  { id: 'a2', title: 'OS Case Study — Process Scheduling', course: 'Operating Systems', code: 'CSE3002', due: '2025-08-18', status: 'Pending', priority: 'High', weight: 10 },
+  { id: 'a3', title: 'Networks Lab Report — TCP/IP', course: 'Computer Networks', code: 'CSE3003', due: '2025-08-22', status: 'Submitted', priority: 'Medium', weight: 8 },
+  { id: 'a4', title: 'SE Assignment — UML Diagrams', course: 'Software Engineering', code: 'CSE3005', due: '2025-08-12', status: 'Overdue', priority: 'High', weight: 12 },
+  { id: 'a5', title: 'Tech Comm Essay — Research Paper', course: 'Technical Communication', code: 'CSE3006', due: '2025-08-05', status: 'Graded', priority: 'Low', weight: 10, grade: 'A' },
+  { id: 'a6', title: 'DBMS Lab — SQL Queries Set 4', course: 'DBMS Lab', code: 'CSE3004', due: '2025-08-25', status: 'Pending', priority: 'Medium', weight: 5 },
+];
+
+// --- Hostel ---
+export const hostelInfo: HostelInfo = {
+  block: 'M Block — Men\'s Hostel',
+  room: 'M-214',
+  type: 'Triple Sharing (AC)',
+  roommate: 'Karthik Reddy, Siddharth Nair',
+  checkIn: 'Aug 2023',
+  fee: 42500,
+  amenities: ['Wi-Fi', 'AC', 'Geyser', 'Study Table', 'Washing Machine', '24/7 Security'],
+  maintenanceRequests: { id: 'm1', issue: 'Leaking bathroom tap', status: 'In Progress', date: '2025-08-10' },
+};
+
+// --- Transport ---
+export const transportRoutes: TransportRoute[] = [
+  { id: 'tr1', routeName: 'VIT → Tambaram', busNo: 'VIT-012', boarding: 'Main Gate', drop: 'Tambaram Bus Stand', departure: '05:30 PM', arrival: '06:15 PM', status: 'Active', fee: 18000 },
+  { id: 'tr2', routeName: 'VIT → T-Nagar', busNo: 'VIT-007', boarding: 'Main Gate', drop: 'T-Nagar', departure: '05:00 PM', arrival: '06:00 PM', status: 'Active', fee: 20000 },
+  { id: 'tr3', routeName: 'VIT → Guindy', busNo: 'VIT-019', boarding: 'Main Gate', drop: 'Guindy', departure: '05:15 PM', arrival: '06:30 PM', status: 'Inactive', fee: 22000 },
+];
+
+// --- Mess Menu ---
+export const messMenu: MessMenuItem[] = [
+  { day: 'Monday', breakfast: 'Idli, Sambar, Chutney, Tea', lunch: 'Rice, Dal, Paneer Butter Masala, Roti, Curd', snacks: 'Samosa, Tea', dinner: 'Rice, Chicken Curry, Roti, Salad' },
+  { day: 'Tuesday', breakfast: 'Poha, Boiled Eggs, Tea', lunch: 'Rice, Sambar, Aloo Gobi, Roti, Buttermilk', snacks: 'Bhel Puri, Tea', dinner: 'Rice, Dal Makhani, Roti, Pickle' },
+  { day: 'Wednesday', breakfast: 'Masala Dosa, Chutney, Tea', lunch: 'Rice, Rajma, Mixed Veg, Roti, Curd', snacks: 'Vada Pav, Tea', dinner: 'Rice, Egg Curry, Roti, Salad' },
+  { day: 'Thursday', breakfast: 'Aloo Paratha, Curd, Tea', lunch: 'Rice, Chana Masala, Bhindi, Roti, Curd', snacks: 'Pasta, Tea', dinner: 'Rice, Mutton Curry, Roti, Salad' },
+  { day: 'Friday', breakfast: 'Upma, Banana, Tea', lunch: 'Rice, Dal, Gobi Manchurian, Roti, Curd', snacks: 'Pav Bhaji, Tea', dinner: 'Rice, Fish Curry, Roti, Salad' },
+  { day: 'Saturday', breakfast: 'Puri Bhaji, Tea', lunch: 'Rice, Dal Tadka, Aloo Matar, Roti, Curd', snacks: 'Cutlet, Tea', dinner: 'Rice, Chicken Biryani, Raita' },
+  { day: 'Sunday', breakfast: 'Chole Bhature, Tea', lunch: 'Rice, Sambar, Paneer Tikka, Roti, Curd', snacks: 'Noodles, Tea', dinner: 'Rice, Veg Korma, Roti, Ice Cream' },
+];
+
+// --- Medical Records ---
+export const medicalRecords: MedicalRecord[] = [
+  { id: 'mr1', date: '2025-07-15', type: 'General Checkup', doctor: 'Dr. Suresh (Campus Clinic)', diagnosis: 'Mild fever, common cold', prescription: 'Paracetamol 500mg (2x/day), Rest 3 days', followUp: '2025-07-18' },
+  { id: 'mr2', date: '2025-03-22', type: 'Sports Injury', doctor: 'Dr. Nisha (Physio)', diagnosis: 'Sprained right ankle', prescription: 'Ice pack, ankle support, rest 1 week', followUp: '2025-03-29' },
+  { id: 'mr3', date: '2025-01-10', type: 'Vaccination', doctor: 'Campus Clinic', diagnosis: 'Annual flu shot', prescription: 'None' },
+  { id: 'mr4', date: '2024-09-05', type: 'Allergy', doctor: 'Dr. Suresh (Campus Clinic)', diagnosis: 'Dust allergy', prescription: 'Cetirizine 10mg as needed' },
+];
+
+// --- Leave Applications ---
+export const leaveApplications: LeaveApplication[] = [
+  { id: 'la1', type: 'Home Visit', from: '2025-08-25', to: '2025-08-28', reason: 'Family function in Coimbatore', status: 'Pending', appliedOn: '2025-08-12', approver: 'Warden — M Block' },
+  { id: 'la2', type: 'Medical Leave', from: '2025-03-22', to: '2025-03-24', reason: 'Ankle sprain recovery', status: 'Approved', appliedOn: '2025-03-21', approver: 'Warden — M Block' },
+  { id: 'la3', type: 'Academic', from: '2025-02-15', to: '2025-02-16', reason: 'Hackathon at IIT Madras', status: 'Approved', appliedOn: '2025-02-10', approver: 'Faculty Advisor' },
+  { id: 'la4', type: 'Personal', from: '2024-12-20', to: '2024-12-22', reason: 'Personal work', status: 'Rejected', appliedOn: '2024-12-18', approver: 'Warden — M Block' },
+];
+
+// --- Scholarships ---
+export const scholarships: Scholarship[] = [
+  { id: 's1', name: 'VIT Merit Scholarship', amount: 50000, status: 'Awarded', deadline: '2025-01-31', criteria: 'CGPA > 8.5', provider: 'VIT University' },
+  { id: 's2', name: 'TCS iON Scholarship', amount: 75000, status: 'Applied', deadline: '2025-09-30', criteria: 'CGPA > 9.0 + Project', provider: 'TCS Foundation' },
+  { id: 's3', name: 'NSTSE Scholarship', amount: 25000, status: 'Eligible', deadline: '2025-10-15', criteria: 'Top 10% in NSTSE exam', provider: 'Unified Council' },
+  { id: 's4', name: 'Infosys Foundation STEM', amount: 60000, status: 'Rejected', deadline: '2025-07-15', criteria: 'Female students in STEM', provider: 'Infosys Foundation' },
+];
+
+// --- Campus Navigation ---
+export const campusPlaces: CampusPlace[] = [
+  { id: 'cp1', name: 'SJT — Main Academic Block', type: 'Academic', block: 'SJT', floor: 0, distance: '200m', icon: 'building' },
+  { id: 'cp2', name: 'Central Library', type: 'Library', block: 'Library', floor: 0, distance: '350m', icon: 'book' },
+  { id: 'cp3', name: 'Food Court — Main Canteen', type: 'Food', block: 'Food Court', floor: 0, distance: '150m', icon: 'utensils' },
+  { id: 'cp4', name: 'Sports Complex', type: 'Sports', block: 'Sports', floor: 0, distance: '500m', icon: 'trophy' },
+  { id: 'cp5', name: 'Medical Center', type: 'Medical', block: 'Medical', floor: 0, distance: '400m', icon: 'heart' },
+  { id: 'cp6', name: 'M Block Hostel', type: 'Hostel', block: 'M Block', floor: 2, distance: '600m', icon: 'home' },
+  { id: 'cp7', name: 'Auditorium — TT', type: 'Auditorium', block: 'TT', floor: 0, distance: '300m', icon: 'music' },
+  { id: 'cp8', name: 'ATM — SBI', type: 'Bank', block: 'Main Gate', floor: 0, distance: '700m', icon: 'credit' },
+];
+
+// --- Predictive Analytics ---
+export const analyticsPredictions: AnalyticsPrediction[] = [
+  { course: 'Database Management Systems', code: 'CSE3001', predictedGrade: 'A', predictedGPA: 9.1, confidence: 87, trend: 'up', risk: 'low', factors: ['High attendance (90%)', 'Strong CAT-1 score', 'Assignments on time'] },
+  { course: 'Operating Systems', code: 'CSE3002', predictedGrade: 'B+', predictedGPA: 8.2, confidence: 72, trend: 'down', risk: 'medium', factors: ['Attendance at 77%', 'Overdue assignment', 'CAT-1 below average'] },
+  { course: 'Computer Networks', code: 'CSE3003', predictedGrade: 'A+', predictedGPA: 9.5, confidence: 91, trend: 'up', risk: 'low', factors: ['92% attendance', 'Top CAT-1 score', 'Lab report submitted'] },
+  { course: 'Software Engineering', code: 'CSE3005', predictedGrade: 'B', predictedGPA: 7.8, confidence: 65, trend: 'down', risk: 'high', factors: ['Attendance at 80%', 'Overdue assignment', 'Low quiz scores', 'Low class participation'] },
+  { course: 'Technical Communication', code: 'CSE3006', predictedGrade: 'A+', predictedGPA: 9.8, confidence: 93, trend: 'stable', risk: 'low', factors: ['91% attendance', 'Essay graded A', 'Active participation'] },
+];
+
