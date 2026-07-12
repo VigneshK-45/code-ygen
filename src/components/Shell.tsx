@@ -38,24 +38,24 @@ import { student } from '../data';
 const NAV: { id: PageId; label: string; icon: typeof LayoutDashboard; group: string; badge?: string }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, group: 'Overview' },
   { id: 'attendance', label: 'Attendance', icon: CalendarCheck, group: 'Overview' },
-  { id: 'qrattendance', label: 'QR Attendance', icon: QrCode, group: 'Overview', badge: 'NEW' },
+  { id: 'qrattendance', label: 'QR Attendance', icon: QrCode, group: 'Overview' },
   { id: 'timetable', label: 'Timetable', icon: CalendarDays, group: 'Overview' },
   { id: 'academics', label: 'Academics', icon: GraduationCap, group: 'Academics' },
   { id: 'courses', label: 'Courses', icon: BookOpen, group: 'Academics' },
-  { id: 'assignments', label: 'Assignment Tracker', icon: ClipboardList, group: 'Academics', badge: 'NEW' },
-  { id: 'analytics', label: 'Performance Analytics', icon: TrendingUp, group: 'Academics', badge: 'NEW' },
-  { id: 'aiadvisor', label: 'AI Academic Advisor', icon: Brain, group: 'Academics', badge: 'NEW' },
+  { id: 'assignments', label: 'Assignment Tracker', icon: ClipboardList, group: 'Academics' },
+  { id: 'analytics', label: 'Performance Analytics', icon: TrendingUp, group: 'Academics' },
+  { id: 'aiadvisor', label: 'AI Academic Advisor', icon: Brain, group: 'Academics' },
   { id: 'fees', label: 'Fee Payment', icon: CreditCard, group: 'Academics' },
-  { id: 'scholarship', label: 'Scholarships', icon: Award, group: 'Academics', badge: 'NEW' },
+  { id: 'scholarship', label: 'Scholarships', icon: Award, group: 'Academics' },
   { id: 'feedback', label: 'Faculty Feedback', icon: MessageSquare, group: 'Academics' },
-  { id: 'placements', label: 'Placement Portal', icon: Briefcase, group: 'Career', badge: 'NEW' },
-  { id: 'idcard', label: 'Digital ID Card', icon: Contact, group: 'Campus Life', badge: 'NEW' },
-  { id: 'hostel', label: 'Hostel Management', icon: Building2, group: 'Campus Life', badge: 'NEW' },
-  { id: 'transport', label: 'Transport', icon: Bus, group: 'Campus Life', badge: 'NEW' },
-  { id: 'mess', label: 'Mess Menu', icon: UtensilsCrossed, group: 'Campus Life', badge: 'NEW' },
-  { id: 'medical', label: 'Medical Records', icon: HeartPulse, group: 'Campus Life', badge: 'NEW' },
-  { id: 'leave', label: 'Leave Application', icon: FileText, group: 'Campus Life', badge: 'NEW' },
-  { id: 'navigation', label: 'Campus Navigation', icon: MapPin, group: 'Campus Life', badge: 'NEW' },
+  { id: 'placements', label: 'Placement Portal', icon: Briefcase, group: 'Career' },
+  { id: 'idcard', label: 'Digital ID Card', icon: Contact, group: 'Campus Life' },
+  { id: 'hostel', label: 'Hostel Management', icon: Building2, group: 'Campus Life' },
+  { id: 'transport', label: 'Transport', icon: Bus, group: 'Campus Life' },
+  { id: 'mess', label: 'Mess Menu', icon: UtensilsCrossed, group: 'Campus Life' },
+  { id: 'medical', label: 'Medical Records', icon: HeartPulse, group: 'Campus Life' },
+  { id: 'leave', label: 'Leave Application', icon: FileText, group: 'Campus Life' },
+  { id: 'navigation', label: 'Campus Navigation', icon: MapPin, group: 'Campus Life' },
   { id: 'notifications', label: 'Notifications', icon: Bell, group: 'Campus' },
   { id: 'events', label: 'Event Board', icon: CalendarHeart, group: 'Campus' },
   { id: 'lostfound', label: 'Lost & Found', icon: Backpack, group: 'Campus' },
@@ -85,7 +85,7 @@ export function Sidebar() {
             </div>
             <div>
               <p className="font-display font-bold text-sm leading-none">VTOP</p>
-              <p className="text-[10px] text-ink-500 dark:text-ink-400 mt-0.5">Chennai </p>
+              <p className="text-[10px] text-ink-500 dark:text-ink-400 mt-0.5">VIT Chennai Campus</p>
             </div>
           </div>
           <button className="lg:hidden btn-ghost !p-2" onClick={() => setSidebarOpen(false)}>
