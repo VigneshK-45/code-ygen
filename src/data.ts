@@ -30,6 +30,34 @@ export const student: Student = {
   bloodGroup: 'B+',
   dob: '14 March 2005',
   avatar: 'https://images.pexels.com/photos/220817/pexels-photo-220817.jpeg?auto=compress&cs=tinysrgb&w=400',
+  address: {
+    line1: '42, Brindavan Nagar',
+    line2: 'Near Anna Arch, K.K. Pudur',
+    city: 'Coimbatore',
+    state: 'Tamil Nadu',
+    pincode: '641038',
+    country: 'India',
+  },
+  family: [
+    { id: 'fam1', relation: 'Father', name: 'Mr. Suresh Mehta', occupation: 'Senior Manager, TCS', phone: '+91 98765 11111', email: 'suresh.mehta@gmail.com' },
+    { id: 'fam2', relation: 'Mother', name: 'Mrs. Anjali Mehta', occupation: 'School Teacher', phone: '+91 98765 22222', email: 'anjali.mehta@gmail.com' },
+    { id: 'fam3', relation: 'Guardian', name: 'Mr. Rajesh Mehta', occupation: 'Business Owner', phone: '+91 98765 33333', email: 'rajesh.mehta@gmail.com' },
+  ],
+  bank: {
+    bankName: 'HDFC Bank',
+    accountName: 'Arjun Mehta',
+    accountNumber: '5010 **** **** 2847',
+    ifsc: 'HDFC0001245',
+    branch: 'VIT Chennai Campus Branch',
+    upiId: 'arjunmehta@hdfcbank',
+  },
+  clubs: [
+    { id: 'c1', name: 'CSI Student Chapter', role: 'Technical Lead', joined: 'Aug 2023', category: 'Technical', active: true },
+    { id: 'c2', name: 'AI/ML Club', role: 'Member', joined: 'Sep 2023', category: 'Technical', active: true },
+    { id: 'c3', name: 'Dance Club — Vortex', role: 'Core Member', joined: 'Oct 2023', category: 'Cultural', active: true },
+    { id: 'c4', name: 'Sports Board — Football', role: 'Member', joined: 'Jan 2024', category: 'Sports', active: true },
+    { id: 'c5', name: 'Photography Club', role: 'Member', joined: 'Aug 2023', category: 'Hobby', active: false },
+  ],
 };
 
 export const courses: Course[] = [

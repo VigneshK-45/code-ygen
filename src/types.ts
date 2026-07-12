@@ -31,6 +31,46 @@ export interface Student {
   bloodGroup: string;
   dob: string;
   avatar: string;
+  address: Address;
+  family: FamilyMember[];
+  bank: BankAccount;
+  clubs: ClubEnrollment[];
+}
+
+export interface Address {
+  line1: string;
+  line2: string;
+  city: string;
+  state: string;
+  pincode: string;
+  country: string;
+}
+
+export interface FamilyMember {
+  id: string;
+  relation: string;
+  name: string;
+  occupation: string;
+  phone: string;
+  email: string;
+}
+
+export interface BankAccount {
+  bankName: string;
+  accountName: string;
+  accountNumber: string;
+  ifsc: string;
+  branch: string;
+  upiId: string;
+}
+
+export interface ClubEnrollment {
+  id: string;
+  name: string;
+  role: string;
+  joined: string;
+  category: string;
+  active: boolean;
 }
 
 export interface Course {
